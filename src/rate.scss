@@ -1,38 +1,57 @@
 .rate__card {
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   text-align: center;
-   width: 300px;
-   height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
 
-   background-color: rgb(241, 241, 241);
-   margin-top: 50px;
-   }
-.card__header{
-   color: white;
-   font-weight: bolder;
+  width: 300px;
 
+  background-color: rgb(241, 241, 241);
+  margin-top: 50px;
 }
-.card__price{
-   color: white;
-   font-weight: bold;
-   font-size: large;
-}
-.card__text{
-   background-color: rgb(221, 221, 221);
-   height: 50px;text-align: center;
-   padding: 10px;
-}
-.rate__card-selected{
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   text-align: center;
-   width: 400px;
-   height: 400px;
 
-   background-color: rgb(241, 241, 241);
-   margin-top: 30px;
+.card__header p {
+  text-align: center;
+  color: white;
+  font-weight: bolder;
+  font-size: 1.25em;
+}
+.card__price p {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 2.3em;
+}
+span.small_up,
+span.small_down {
+  font-size: small;
+}
+span.small_up {
+  position: absolute;
+  left: 80px;
+}
+span.small_down {
+  position: absolute;
+  top: 20px;
+  left: 200px;
+}
 
+.card__trafficValue p {
+  text-align: center;
+  font-weight: 400;
+  font-size: 0.85em;
+}
+.card__text {
+  background-color: rgb(221, 221, 221);
+  height: 50px;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.85em;
+  font-weight: 400;
+  line-height: 1.35em;
+}
+.rate__card-selected {
+  height: 330px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.073);
+  font-size: larger;
 }
