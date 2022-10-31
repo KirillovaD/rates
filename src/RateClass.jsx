@@ -1,13 +1,31 @@
 import React from "react";
 import "./rate.scss";
 
-export default class Rate extends React.Component {
-  render() {
-    const { name, price, trafficValue, color, isSelected } = this.props;
+export default class RateClass extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      isSelected: false,
+    };
+  }
 
-    const classRate = isSelected ? "rate__card-selected" : "rate__card";
+  handleSelected = () => {
+    this.setState({
+      isSelected: !this.state.isSelected,
+    });
+  };
+
+  render() {
+    const { name, price, trafficValue, color } = this.props;
+    const { isSelected } = this.state;
+
     return (
-      <div className={`rate__card ${classRate}`}>
+      <div
+        className={`rate__card ${
+          isSelected ? "rate__card-selected" : "rate__card"
+        }`}
+        onClick={this.handleSelected}
+      >
         <div className={`card__header ${color.card__header_color} `}>
           <p>{`Безлимитный ${name}`}</p>
         </div>
