@@ -37,9 +37,9 @@ const rates = [
     id: 4,
   },
 ];
-console.log(rates.color);
+
 function AppFunction() {
-  const [isSelected, setIsSelected] = useState(0);
+  const [selectedRateId, setSelectedRateId] = useState(0);
 
   return (
     <div className="App">
@@ -52,8 +52,8 @@ function AppFunction() {
             name={rate.name}
             price={rate.price}
             trafficValue={rate.trafficValue}
-            isSelected={isSelected === `${rate.id}`}
-            onCardClick={setIsSelected}
+            isSelected={selectedRateId === rate.id}
+            onCardClick={setSelectedRateId}
           />
         ))}
       </div>

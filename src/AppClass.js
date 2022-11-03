@@ -32,7 +32,7 @@ const rates = [
     color: color4,
   },
 ];
-console.log(rates.color);
+
 function AppClass() {
   return (
     <div className="App">
